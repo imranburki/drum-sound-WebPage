@@ -1,0 +1,62 @@
+body{
+    background-image: linear-gradient(180deg,rgb(23, 146, 119),rgb(17, 50, 99));
+    padding: 0px;
+    margin: 0px;
+}
+.div0{
+    margin-top:120px ;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 100vh;
+}
+.div1 ul li{
+    display: inline-block;
+    color: white;
+    background: rgba(226, 219, 219, 0.4);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0.1rem;
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem;
+    width: 90px;
+    text-shadow: 0 0 5px black;
+    transition: all 1.07s;
+}
+.div2 ul li{
+    display: inline-block;
+    color: white;
+    background: rgba(226, 219, 219, 0.4);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0.1rem 0.1rem 0.1rem 1rem;
+    font-size: 1.5rem;
+    padding: 1.5rem 0.5rem;
+    width: 105px;
+    text-shadow: 0 0 5px black;
+    transition: all 1.07s;
+}
+.div3 ul li{
+    display: inline-block;
+    color: white;
+    background: rgba(226, 219, 219, 0.4);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    font-size: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    width: 130px;
+    text-shadow: 0 0 5px black;
+    transition: all 1.07s;
+}
+kbd{
+    display: block;
+    font-size: 40px;
+}
+.playing{
+    transform: scale(1);
+    border-color: #38ee0b;
+    box-shadow: 0 0 10px #ffc600;
+}

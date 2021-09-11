@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pstylesheet.css">
+    </head>
+    <body>
+        <div class="div0">
+            <div class="div1">
+                <ul>
+                    <li data-key="81"><kbd>Q</kbd></li>
+                    <li data-key="87"><kbd>W</kbd></li>
+                    <li data-key="69"><kbd>E</kbd></li>
+                    <li data-key="82"><kbd>R</kbd></li>
+                    <li data-key="84"><kbd>T</kbd></li>
+                    <li data-key="89"><kbd>Y</kbd></li>
+                    <li data-key="85"><kbd>U</kbd></li>
+                    <li data-key="73"><kbd>I</kbd></li>
+                    <li data-key="79"><kbd>O</kbd></li>
+                    <li data-key="80"><kbd>P</kbd></li>
+                </ul>
+            </div>
+    
+            <div class="div2">
+                <ul>
+                    <li data-key="65"><kbd>A</kbd></li>
+                    <li data-key="83"><kbd>S</kbd></li>
+                    <li data-key="68"><kbd>D</kbd></li>
+                    <li data-key="70"><kbd>F</kbd></li>
+                    <li data-key="71"><kbd>G</kbd></li>
+                    <li data-key="72"><kbd>H</kbd></li>
+                    <li data-key="74"><kbd>J</kbd></li>
+                    <li data-key="75"><kbd>K</kbd></li>
+                    <li data-key="76"><kbd>L</kbd></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="div3">
+                <ul>
+                    <li data-key="90"><kbd>Z</kbd></li>
+                    <li data-key="88"><kbd>X</kbd></li>
+                    <li data-key="67"><kbd>C</kbd></li>
+                    <li data-key="86"><kbd>V</kbd></li>
+                    <li data-key="66"><kbd>B</kbd></li>
+                    <li data-key="78"><kbd>N</kbd></li>
+                    <li data-key="77"><kbd>M</kbd></li>
+                </ul>
+            </div>
+           
+
+        </div>
+        <audio data-key="65" src="./sounds/clap.wav"></audio>
+        <audio data-key="83" src="./sounds/hihat.wav"></audio>
+        <audio data-key="68" src="./sounds/kick.wav"></audio>
+        <audio data-key="70" src="./sounds/openhat.wav"></audio>
+        <audio data-key="71" src="./sounds/boom.wav"></audio>
+        <audio data-key="72" src="./sounds/ride.wav"></audio>
+        <audio data-key="74" src="./sounds/snare.wav"></audio>
+        <audio data-key="75" src="./sounds/tom.wav"></audio>
+        <audio data-key="76" src="./sounds/tink.wav"></audio>
+        <audio data-key="66" src="./sounds/ride-cymbal.wav"></audio>
+        <audio data-key="67" src="./sounds/clap.wav"></audio>
+        <audio data-key="69" src="./sounds/hihat.wav"></audio>
+        <audio data-key="70" src="./sounds/openhat.wav"></audio>
+        <audio data-key="73" src="./sounds/boom.wav"></audio> 
+        <audio data-key="77" src="./sounds/ride.wav"></audio>
+        <audio data-key="78" src="./sounds/snare.wav"></audio>
+        <audio data-key="79" src="./sounds/tom.wav"></audio> 
+        <audio data-key="80" src="./sounds/tink.wav"></audio>
+        <audio data-key="81" src="./sounds/clap.wav"></audio>
+        <audio data-key="82" src="./sounds/hihat.wav"></audio>      
+        <audio data-key="83" src="./sounds/kick.wav"></audio>
+        <audio data-key="84" src="./sounds/openhat.wav"></audio>
+        <audio data-key="85" src="./sounds/boom.wav"></audio>
+        <audio data-key="86" src="./sounds/ride.wav"></audio>
+        <audio data-key="87" src="./sounds/snare.wav"></audio>
+        <audio data-key="88" src="./sounds/tom.wav"></audio>
+        <audio data-key="89" src="./sounds/tink.wav"></audio>
+        <audio data-key="90" src="./sounds/ride-cymbal.wav"></audio>
+        <audio data-key="91" src="./sounds/clap.wav"></audio>
+        <audio data-key="92" src="./sounds/hihat.wav"></audio>
+    </body>
+    <script>
+             window.addEventListener('keydown',function(e){
+            const audio=document.querySelector(`audio[data-key="${e.keyCode}"`);
+            const key=document.querySelector(`ul li[data-key="${e.keyCode}"`);
+           // console.log(key);
+            if(!audio) return;
+            audio.currentTime=0;
+            audio.play();
+            key.classList.add('playing');
+        });
+        const keys=document.querySelectorAll('ul li');
+        keys.forEach(element => {
+           element.addEventListener('transitionend',transitionEnd); 
+        });
+
+        function transitionEnd(e){
+           // console.log(e);
+            if(e.propertyName!='transform') return;
+           this.classList.remove('playing');
+           //console.log(this);
+        }
+    </script>
+</html>
