@@ -5,6 +5,12 @@
     </head>
     <body>
         <div class="div0">
+            <!-- <div class="container">
+                <button id="recordButton">Record</button>
+                <button id="stopButton" disabled>Stop</button>
+                <audio id="audio" controls></audio>
+            </div> -->
+            
             <div class="div1">
                 <ul>
                     <li data-key="81"><kbd>Q</kbd></li>
@@ -82,6 +88,16 @@
         <audio data-key="92" src="./sounds/hihat.wav"></audio>
     </body>
     <script>
+//    const recordButton = document.getElementById("recordButton");
+// const stopButton = document.getElementById("stopButton");
+// const audioElement = document.getElementById("audio");
+
+// let mediaRecorder;
+// let recordedChunks = [];
+
+// recordButton.addEventListener("click", startRecording);
+// stopButton.addEventListener("click", stopRecording);
+
              window.addEventListener('keydown',function(e){
             const audio=document.querySelector(`audio[data-key="${e.keyCode}"`);
             const key=document.querySelector(`ul li[data-key="${e.keyCode}"`);
@@ -102,5 +118,35 @@
            this.classList.remove('playing');
            //console.log(this);
         }
+       
+// async function startRecording() {
+//     recordedChunks = [];
+
+//     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+//     mediaRecorder = new MediaRecorder(stream);
+
+//     mediaRecorder.ondataavailable = event => {
+//         if (event.data.size > 0) {
+//             recordedChunks.push(event.data);
+//         }
+//     };
+
+//     mediaRecorder.onstop = () => {
+//         const blob = new Blob(recordedChunks, { type: "audio/wav" });
+//         const url = URL.createObjectURL(blob);
+//         audioElement.src = url;
+//     };
+
+//     mediaRecorder.start();
+//     recordButton.disabled = true;
+//     stopButton.disabled = false;
+// }
+
+// function stopRecording() {
+//     mediaRecorder.stop();
+//     recordButton.disabled = false;
+//     stopButton.disabled = true;
+// } 
     </script>
 </html>

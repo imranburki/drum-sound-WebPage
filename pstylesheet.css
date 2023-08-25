@@ -60,3 +60,21 @@ kbd{
     border-color: #38ee0b;
     box-shadow: 0 0 10px #ffc600;
 }
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
