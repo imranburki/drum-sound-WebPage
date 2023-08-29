@@ -1,8 +1,0 @@
-name: "CI for Testing"
-
-on: push
-
-jobs:
-  CI using with GitHub Action:
-  runs-on: ubuntu-lates
-  
