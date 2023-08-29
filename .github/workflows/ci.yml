@@ -1,8 +1,6 @@
 name: "CI using Github Actions"
 
 on: push
-
 jobs:
-    Expolring CI with Github Actions:
-    runs-on: ubuntu-latest
-
+    Expolring-CI-with-Github-Actions:
+        runs-on: ubuntu-latest
