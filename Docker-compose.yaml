@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  test-nginx-webserver:
+  image: nginx
+  port:
+    - 8080:80
+  depends-on:
+    - drum-sound-webpage;
+drum-sound-webpage:
+    image: burki-app
+    ports:
+      - 80:80
